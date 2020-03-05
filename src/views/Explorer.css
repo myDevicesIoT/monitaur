@@ -1,0 +1,22 @@
+.card .card-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.card .body-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #343a40;
+}
+
+.card .card-reading {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card .card-text {
+    font-size: 12px;
+    color: #9c9c9c
+}
