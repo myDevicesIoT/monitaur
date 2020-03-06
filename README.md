@@ -1,25 +1,33 @@
 # Monitaur
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a custom app that uses the IoT in a Box API and bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
-## Available Scripts
+## Requirements
+- NodeJS
+- NPM or Yarn
 
-In the project directory, you can run:
+## Setup & Installation
+This project uses ReactJS framework and Express to host the client application. 
 
-### `yarn start`
+```
+cp .env.example .env
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Edit the `.env` to your specific Client ID and Realm/Tenant.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```
+npm install
+```
 
-### `yarn test`
+### Development
+For development, use `react-scripts` to start the app and in parallel start the express app to proxy API requests. If you need a different `PORT` for the API see the `proxy` attribute under the `package.json` file. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+react-scripts start 
+PORT=8080 node app.js 
+```
 
-### `yarn build`
+## Production Build
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +37,14 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### Docker
+This app contains a `Dockerfile` and can be used to build a docker image and run
 
 ```
-docker run -d -p 3001:3000 --name monitaur -e NODE_ENV=production -e REACT_APP_IDP_URL=https://auth.mydevices.com/auth -e REACT_APP_IDP_CLIENT_ID=monitaur-app -e REACT_APP_IDP_REALM=iotinabox mydevices/monitaur:v0.0.1
+docker run -d -p 3001:3000 --name monitaur \
+-e NODE_ENV=production \
+-e REACT_APP_IDP_URL=https://auth.mydevices.com/auth \
+-e REACT_APP_IDP_CLIENT_ID=monitaur-app \
+-e REACT_APP_IDP_REALM=iotinabox \
+monitaur
 ```

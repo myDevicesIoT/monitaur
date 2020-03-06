@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger('dev'));
 
-app.use('/api', proxy(process.env.MYDEVICES_API_URL || 'iotinabox-api.mydevices.com'));
+app.use('/api', proxy(process.env.MYDEVICES_API_URL));
 
 if (process.env.NODE_ENV == 'production') {
     const publicDir = path.resolve(__dirname + '/build');
