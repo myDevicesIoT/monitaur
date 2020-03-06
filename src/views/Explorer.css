@@ -11,8 +11,13 @@
     color: #343a40;
 }
 
-.card .card-reading {
+.card h5.card-reading {
     font-size: 2rem;
+    font-weight: bold;
+}
+
+.card h6.card-reading {
+    font-size: 1rem;
     font-weight: bold;
 }
 

@@ -29,7 +29,7 @@ const routes = mount({
     context.isAuthenticated
       ? redirect(
           // Redirect to the value of the URL's `redirectTo` parameter. If no
-          // redirectTo is specified, default to `/home`.
+          // redirectTo is specified, default to `/explorer`.
           request.params.redirectTo ? decodeURIComponent(request.params.redirectTo) : '/explorer',
         )
      : lazy(() => import('../views/Login')),

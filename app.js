@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger('dev'));
 
-app.use('/api', proxy(process.ENV.MYDEVICES_URL || 'api.iotinabox.com'));
+app.use('/api', proxy(process.env.MYDEVICES_API_URL || 'iotinabox-api.mydevices.com'));
 
 app.post('/api/auth', (req, res) => {
     console.log(req.body);

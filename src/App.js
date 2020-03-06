@@ -18,12 +18,11 @@ class App extends React.Component {
   }
 
   onKeycloakTokens = tokens => {
-    console.log('[KC] setting token on local storage')
     localStorage.setItem('kcTokens', JSON.stringify(tokens));
   }
 
   onKeycloakEvent = e => {
-    //console.log(e);
+    console.log(e);
   }
 
   render() {
@@ -32,6 +31,7 @@ class App extends React.Component {
       <KeycloakProvider
         keycloak={keycloak}
         initConfig={{
+          flow: 'implicit',
           onLoad: 'login-required',
           promiseType: 'native',
           ...this.tokens,
