@@ -2,6 +2,8 @@
 
 This project is a custom app that uses the IoT in a Box API and bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
+![](https://res.cloudinary.com/dctlrnwuz/image/upload/v1583522165/engineering/monitaur-app-preview.png)
+
 ## Requirements
 - NodeJS
 - NPM or Yarn
