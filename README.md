@@ -28,3 +28,8 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+
+```
+docker run -d -p 3001:3000 --name monitaur -e NODE_ENV=production -e REACT_APP_IDP_URL=https://auth.mydevices.com/auth -e REACT_APP_IDP_CLIENT_ID=monitaur-app -e REACT_APP_IDP_REALM=iotinabox mydevices/monitaur:v0.0.1
+```

@@ -32,7 +32,7 @@ class App extends React.Component {
         keycloak={keycloak}
         initConfig={{
           flow: 'implicit',
-          onLoad: 'login-required',
+          onLoad: 'check-sso',
           promiseType: 'native',
           ...this.tokens,
           

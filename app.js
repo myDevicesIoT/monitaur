@@ -24,12 +24,6 @@ app.use(logger('dev'));
 
 app.use('/api', proxy(process.env.MYDEVICES_API_URL || 'iotinabox-api.mydevices.com'));
 
-app.post('/api/auth', (req, res) => {
-    console.log(req.body);
-    console.log(req.query);
-    res.redirect('/?jwt=token');
-})
-
 if (process.env.NODE_ENV == 'production') {
     const publicDir = path.resolve(__dirname + '/build');
     // static folder

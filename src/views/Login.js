@@ -7,8 +7,8 @@ import { withKeycloak } from 'react-keycloak';
 const LoginPage = withKeycloak(({ keycloak }) => {
   return (
     <Jumbotron>
-        <h1>Welcome Back!</h1>
-        <p> Sign-In to get started. </p>
+        <h1>Temperature & Humidity Monitoring!</h1>
+        <p> With Monitaur it's easy and simple to monitor your assets. Sign-in to get started! </p>
         <Button variant="primary" size="lg" onClick={() => keycloak.login()}>
             Login
         </Button>
