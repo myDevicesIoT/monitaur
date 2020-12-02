@@ -4,25 +4,25 @@
   "private": true,
   "proxy": "http://localhost:8080",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.13",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-http-proxy": "^1.6.0",
-    "keycloak-js": "^9.0.0",
-    "morgan": "^1.9.1",
+    "express-http-proxy": "^1.6.2",
+    "keycloak-js": "^9.0.3",
+    "morgan": "^1.10.0",
     "navi": "^0.14.0",
-    "react": "^16.13.0",
-    "react-bootstrap": "^1.0.0-beta.17",
-    "react-charts": "^2.0.0-beta.6",
-    "react-dom": "^16.13.0",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.4.0",
+    "react-charts": "^2.0.0-beta.7",
+    "react-dom": "^16.14.0",
     "react-keycloak": "^8.0.1-191210",
-    "react-navi": "^0.14.3",
+    "react-navi": "^0.14.4",
     "react-scripts": "3.4.0"
   },
   "scripts": {
@@ -48,6 +48,6 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.6"
+    "babel-loader": "^8.2.2"
   }
 }
