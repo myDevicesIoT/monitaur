@@ -3,7 +3,7 @@ import { useKeycloak } from 'react-keycloak';
 class Billing {
     constructor() {
         const [keycloak] = useKeycloak();
-        this.token = keycloak.idToken;
+        this.token = keycloak.token;
         this.headers = { 
             "Authorization": `Bearer ${this.token}` ,
             "Content-Type": "application/json"

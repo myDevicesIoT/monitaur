@@ -8,7 +8,7 @@ import { AppRouter } from './routes';
 const keycloak = new Keycloak({ 
   url: process.env.REACT_APP_IDP_URL, 
   realm: process.env.REACT_APP_IDP_REALM, 
-  clientId: process.env.REACT_APP_IDP_CLIENT_ID
+  clientId: decodeURIComponent(process.env.REACT_APP_IDP_CLIENT_ID)
 });
 
 class App extends React.Component {
@@ -32,7 +32,7 @@ class App extends React.Component {
         keycloak={keycloak}
         initConfig={{
           flow: 'implicit',
-          onLoad: 'check-sso',
+          onLoad: 'login-required',
           promiseType: 'native',
           ...this.tokens,
           
